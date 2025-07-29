@@ -1,37 +1,40 @@
-import React, { useRef, useState } from "react";
+import React, { useMemo, useState } from 'react'
 
 const App = () => {
-  const [time, settime ] = useState(0)
-  const timeerRef = useRef(null);
+  const [count, setcount] = useState(0);
 
 
-  function start() {
-   timeerRef.current = setInterval(() => {
-      settime(time => time + 1)
-    }, 1000);
-  }
 
-  function stop() {
-    clearInterval(timeerRef.current)
-    timeerRef.current = null;
+  function task(num){
+    console.log("expensive task chl raha hai");
+    
+
+    for(let i = 0 ; i<=1000000000; i++){
+      
+    }
+    return num *2
     
   }
 
-  function Reset() {
-    stop()
-    settime(0)
-  }
+  let value = useMemo(()=>{
+   return  task(5);
+  },[])
+
   return (
     <>
-    <h1>STOPWATCH:{time} SECONDS</h1>
-      <div>
-        <button onClick={start}>start</button>
-        <button onClick={stop}>stop</button>
-        <button onClick={Reset}>Reset</button>
-      </div>
-      
-    </>
-  );
-};
 
-export default App;
+    <div>
+      <button onClick={(()=>{
+        setcount(count+1);
+      })}>increment</button>
+    </div>
+    <h1>{count}</h1>
+    <h2>{value}</h2>
+
+
+
+    </>
+  )
+}
+
+export default App

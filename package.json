@@ -2,7 +2,7 @@
   "name": "use-ref",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.5",
+    "nodemon": "^3.1.10",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -23,5 +27,18 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "vite": "^7.0.4"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Himanshu-Gupta0007/UseRef.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Himanshu-Gupta0007/UseRef/issues"
+  },
+  "homepage": "https://github.com/Himanshu-Gupta0007/UseRef#readme"
 }
